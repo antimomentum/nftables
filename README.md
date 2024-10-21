@@ -1,7 +1,3 @@
-# This is where I post some nftables stuff.
-# ipset and DPI example
-
-
 ```table ip filter {
         set RAWTRACK {
                 type ipv4_addr . inet_service . inet_service
