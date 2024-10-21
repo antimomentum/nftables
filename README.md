@@ -17,6 +17,7 @@ table ip filter {
         chain input {
                 type filter hook input priority raw; policy drop;
                 ip length 59 ip saddr . udp dport . 17 @RAWTRACK @ih,0,8 0x5c counter packets 0 bytes 0 accept
+                ip saddr . tcp dport . 6 @RAWTRACK accept
         }
 }
 ```
